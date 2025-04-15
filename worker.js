@@ -43,7 +43,8 @@ const html = `<!DOCTYPE html>
       const data = await response.json();
       if (data.url) {
         document.getElementById('result').innerHTML = 
-          `<a href="${data.url}" target="_blank" style="color:#2185d0;text-decoration:none">✅ 生成成功，点击下载配置</a>`;
+  `<a href="${data.url}" target="_blank" style="color:#2185d0;text-decoration:none">✅ 生成成功，点击下载配置</a>`;  // 注意闭合反引号和分号
+
       } else {
         document.getElementById('result').innerHTML = 
           `<div style="color:red">错误: ${data.error || '未知错误'}</div>`;
